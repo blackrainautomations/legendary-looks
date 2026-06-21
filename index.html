@@ -57,6 +57,9 @@
   nav{display:flex;align-items:center;justify-content:space-between;height:80px}
   .logo{font-family:'Bebas Neue',sans-serif;font-size:27px;letter-spacing:2px}
   .logo span{color:var(--gold)}
+  .logo .stache{width:32px;height:auto;fill:var(--gold);margin-right:10px;vertical-align:-7px;filter:drop-shadow(0 0 8px rgba(237,201,103,.45))}
+  .stache-hero{margin-bottom:20px}
+  .stache-hero svg{width:82px;height:auto;fill:var(--gold);filter:drop-shadow(0 0 18px rgba(237,201,103,.5))}
   .navlinks{display:flex;gap:34px;align-items:center}
   .navlinks a{font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);transition:.2s}
   .navlinks a:hover{color:var(--cream)}
@@ -179,7 +182,7 @@
 <header id="hdr">
   <div class="wrap">
     <nav>
-      <div class="logo">LEGENDARY <span>LOOKS</span></div>
+      <div class="logo"><svg class="stache" viewBox="0 0 64 24" aria-hidden="true"><path d="M2 9C9 9 13 15 21 15 27 15 31 10 32 8 33 10 37 15 43 15 51 15 55 9 62 9 57 17 49 20 43 18 37 16 34 13 32 13 30 13 27 16 21 18 15 20 7 17 2 9Z"/></svg>LEGENDARY <span>LOOKS</span></div>
       <div class="navlinks" id="nav">
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
@@ -197,6 +200,7 @@
   <div class="hero-bg"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80" alt="Barbershop" /></div>
   <div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div>
   <div class="wrap hero-inner">
+    <div class="stache-hero" data-reveal><svg viewBox="0 0 64 24" aria-hidden="true"><path d="M2 9C9 9 13 15 21 15 27 15 31 10 32 8 33 10 37 15 43 15 51 15 55 9 62 9 57 17 49 20 43 18 37 16 34 13 32 13 30 13 27 16 21 18 15 20 7 17 2 9Z"/></svg></div>
     <div class="kicker" data-reveal><span class="dot"></span> Vernon, CT · Home of ShawnyBoy</div>
     <h1 data-reveal>Sharp.<br>Never <span class="grad-anim">Average.</span></h1>
     <p data-reveal>Precision fades, classic and modern cuts, straight-razor detailing and hot-towel shaves. The chair where Vernon comes to look legendary.</p>
@@ -327,7 +331,7 @@
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="wrap">
-    <div class="logo">LEGENDARY <span>LOOKS</span></div>
+    <div class="logo"><svg class="stache" viewBox="0 0 64 24" aria-hidden="true"><path d="M2 9C9 9 13 15 21 15 27 15 31 10 32 8 33 10 37 15 43 15 51 15 55 9 62 9 57 17 49 20 43 18 37 16 34 13 32 13 30 13 27 16 21 18 15 20 7 17 2 9Z"/></svg>LEGENDARY <span>LOOKS</span></div>
     <p>500 Talcottville Rd, Vernon, CT 06066 · <a href="tel:+18608585301">(860) 858-5301</a></p>
     <p style="margin-top:6px"><a href="https://www.instagram.com/legendary_looks_barbershop/" target="_blank" rel="noopener">@legendary_looks_barbershop</a></p>
     <p style="margin-top:8px;font-size:13px">&copy; 2026 Legendary Looks Barbershop. All rights reserved.</p>
