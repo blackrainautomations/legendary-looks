@@ -123,6 +123,14 @@
   .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
   .stat .n{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,82px);line-height:1}
   .stat .l{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+  .barber-grid{display:grid;grid-template-columns:.85fr 1fr;gap:50px;align-items:center}
+  .barber-media{position:relative}
+  .barber-media img{width:100%;border-radius:16px;display:block;filter:grayscale(.15);box-shadow:0 24px 50px rgba(0,0,0,.5)}
+  .barber-media .tag{position:absolute;bottom:-18px;left:-12px;background:linear-gradient(100deg,var(--gold),var(--amber));color:#06111d;padding:13px 20px;border-radius:12px;font-family:'Bebas Neue',sans-serif;letter-spacing:1px;box-shadow:0 14px 30px rgba(74,163,255,.4)}
+  .barber h2{font-size:clamp(38px,5.5vw,64px);margin-bottom:6px}
+  .barber .role{color:var(--gold);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-size:13px;margin-bottom:18px}
+  .barber p{color:var(--muted);margin-bottom:16px}
+  @media(max-width:880px){.barber-grid{grid-template-columns:1fr}}
 
   /* GALLERY */
   .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -230,33 +238,33 @@
     <div class="grid">
       <div class="card" data-reveal>
         <div class="ic"><svg class="ico" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
-        <h3>Signature Cut</h3><p>Classic or modern, tailored to you and finished razor-clean. The look you walk in for.</p>
-        <div class="price">from <span>$30</span></div>
+        <h3>Cut &amp; Razor Finish</h3><p>Classic or modern, tailored to you and finished with a straight-razor clean-up on edges, neck and brows.</p>
+        <div class="price"><span>$30</span> · 30 min</div>
       </div>
       <div class="card" data-reveal>
         <div class="ic"><svg class="ico" viewBox="0 0 24 24"><path d="M4 4l16 16M14 10l6-6M3 21l6-6"/></svg></div>
-        <h3>Hot Towel Shave</h3><p>Full shave with hot towel and lather — the old-school ritual done right.</p>
-        <div class="price">from <span>$35</span></div>
+        <h3>Hot Towel Shave</h3><p>Full straight-razor shave with hot towel and lather — the old-school ritual, done right.</p>
+        <div class="price"><span>$35</span> · 30 min</div>
       </div>
       <div class="card" data-reveal>
         <div class="ic"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2v6M9 8h6M7 8c0 6 2 14 5 14s5-8 5-14"/></svg></div>
-        <h3>Beard Sculpting</h3><p>Shaped, lined and conditioned. A beard that frames the whole look.</p>
-        <div class="price">from <span>$20</span></div>
+        <h3>Beard Trim &amp; Line-Up</h3><p>Shaped, lined and conditioned — a crisp beard that frames the whole cut.</p>
+        <div class="price"><span>$20</span> · 15 min</div>
       </div>
       <div class="card" data-reveal>
         <div class="ic"><svg class="ico" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18z"/></svg></div>
-        <h3>Custom Designs</h3><p>Hair designs and detailing for when you want something nobody else has.</p>
+        <h3>Hair Designs</h3><p>Custom lines and designs for when you want something nobody else is walking around with.</p>
         <div class="price">custom</div>
       </div>
       <div class="card" data-reveal>
         <div class="ic"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
         <h3>Grey Blending</h3><p>Subtle grey camouflage that takes years off without looking touched.</p>
-        <div class="price">from <span>$25</span></div>
+        <div class="price"><span>$25</span> · 20 min</div>
       </div>
       <div class="card" data-reveal>
         <div class="ic"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg></div>
-        <h3>The Full Service</h3><p>Cut, shave and detail — the complete reset. Walk out legendary.</p>
-        <div class="price">from <span>$55</span></div>
+        <h3>The Legendary</h3><p>The full experience — cut, hot-towel shave and beard detail. The complete reset.</p>
+        <div class="price"><span>$60</span> · 60 min</div>
       </div>
     </div>
   </div>
@@ -270,6 +278,27 @@
       <div class="stat" data-reveal><div class="n grad"><span class="count" data-to="15">0</span>+</div><div class="l">Years in the Chair</div></div>
       <div class="stat" data-reveal><div class="n grad"><span class="count" data-to="2">0</span>&times;</div><div class="l">Award-Winning Barber</div></div>
       <div class="stat" data-reveal><div class="n grad"><span class="count" data-to="7">0</span></div><div class="l">Days a Week</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEET THE BARBER ===== -->
+<section class="barber" id="barber">
+  <div class="wrap barber-grid">
+    <div class="barber-media" data-reveal>
+      <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=700&q=80" alt="ShawnyBoy at the chair" />
+      <div class="tag">2&times; Award-Winning</div>
+    </div>
+    <div data-reveal>
+      <span class="eyebrow">Meet the Barber</span>
+      <h2>ShawnyBoy</h2>
+      <div class="role">Owner · Master Barber</div>
+      <p>Two-time award-winning Master Barber and the man behind the chair. Classic skill, modern eye — running a shop known for clean fades, good music and better energy.</p>
+      <p>Book with Shawny direct, or pull up — but the good slots go fast.</p>
+      <div class="hero-cta">
+        <a class="btn mag" href="https://booksy.com/en-us/281196_legendary-looks-barbershop_barber-shop_119712_vernon" target="_blank" rel="noopener">Book with ShawnyBoy</a>
+        <a class="btn btn-ghost mag" href="https://www.instagram.com/legendary_looks_barbershop/" target="_blank" rel="noopener">@legendary_looks_barbershop</a>
+      </div>
     </div>
   </div>
 </section>
