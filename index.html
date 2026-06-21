@@ -69,14 +69,17 @@
   /* HERO */
   .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
   .hero-bg{position:absolute;inset:0;z-index:0;background:var(--bg)}
-  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.28;filter:grayscale(.3) contrast(1.05)}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.13;filter:grayscale(.4) contrast(1.05)}
   .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,8,12,.55),rgba(6,8,12,.9))}
-  .aurora{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55;z-index:0;will-change:transform}
-  .a1{width:520px;height:520px;background:radial-gradient(circle,var(--ember),transparent 65%);top:-120px;left:-80px;animation:float1 14s ease-in-out infinite}
-  .a2{width:600px;height:600px;background:radial-gradient(circle,var(--gold),transparent 65%);bottom:-180px;right:-120px;animation:float2 18s ease-in-out infinite}
-  .a3{width:420px;height:420px;background:radial-gradient(circle,var(--amber),transparent 65%);top:30%;right:25%;animation:float1 22s ease-in-out infinite}
-  @keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,40px)}}
-  @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,-60px)}}
+  .aurora{position:absolute;border-radius:50%;filter:blur(90px);opacity:.7;z-index:0;mix-blend-mode:screen;will-change:transform,opacity}
+  .a1{width:600px;height:600px;background:radial-gradient(circle,var(--gold),transparent 62%);top:-140px;left:-100px;animation:drift1 16s ease-in-out infinite}
+  .a2{width:680px;height:680px;background:radial-gradient(circle,#36cfff,transparent 62%);bottom:-220px;right:-140px;animation:drift2 20s ease-in-out infinite}
+  .a3{width:500px;height:500px;background:radial-gradient(circle,var(--amber),transparent 62%);top:22%;right:20%;animation:drift3 24s ease-in-out infinite}
+  .a4{width:460px;height:460px;background:radial-gradient(circle,#7a5cff,transparent 62%);top:42%;left:16%;animation:drift1 28s ease-in-out infinite}
+  .a5{width:360px;height:360px;background:radial-gradient(circle,#bfe9ff,transparent 60%);top:8%;left:46%;animation:drift2 19s ease-in-out infinite}
+  @keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(80px,60px) scale(1.15)}66%{transform:translate(-40px,30px) scale(.95)}}
+  @keyframes drift2{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-70px,-50px) scale(1.12)}66%{transform:translate(50px,-30px) scale(1.05)}}
+  @keyframes drift3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-70px) scale(1.2)}}
   .hero-inner{position:relative;z-index:2;max-width:840px}
   .kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:22px;padding:8px 16px;border:1px solid var(--line);border-radius:30px;background:rgba(255,255,255,.02)}
   .kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--ember);box-shadow:0 0 12px var(--ember);animation:pulse 2s infinite}
@@ -190,7 +193,7 @@
 <header id="hdr">
   <div class="wrap">
     <nav>
-      <div class="logo"><svg class="stache" viewBox="0 0 64 24" aria-hidden="true"><path d="M2 9C9 9 13 15 21 15 27 15 31 10 32 8 33 10 37 15 43 15 51 15 55 9 62 9 57 17 49 20 43 18 37 16 34 13 32 13 30 13 27 16 21 18 15 20 7 17 2 9Z"/></svg>LEGENDARY <span>LOOKS</span></div>
+      <div class="logo">LEGENDARY <span>LOOKS</span></div>
       <div class="navlinks" id="nav">
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
@@ -206,9 +209,8 @@
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero-bg"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80" alt="Barbershop" /></div>
-  <div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div>
+  <div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div><div class="aurora a4"></div><div class="aurora a5"></div>
   <div class="wrap hero-inner">
-    <div class="stache-hero" data-reveal><svg viewBox="0 0 64 24" aria-hidden="true"><path d="M2 9C9 9 13 15 21 15 27 15 31 10 32 8 33 10 37 15 43 15 51 15 55 9 62 9 57 17 49 20 43 18 37 16 34 13 32 13 30 13 27 16 21 18 15 20 7 17 2 9Z"/></svg></div>
     <div class="kicker" data-reveal><span class="dot"></span> Vernon, CT · Home of ShawnyBoy</div>
     <h1 data-reveal>Sharp.<br>Never <span class="grad-anim">Average.</span></h1>
     <p data-reveal>Precision fades, classic and modern cuts, straight-razor detailing and hot-towel shaves. The chair where Vernon comes to look legendary.</p>
@@ -360,7 +362,7 @@
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="wrap">
-    <div class="logo"><svg class="stache" viewBox="0 0 64 24" aria-hidden="true"><path d="M2 9C9 9 13 15 21 15 27 15 31 10 32 8 33 10 37 15 43 15 51 15 55 9 62 9 57 17 49 20 43 18 37 16 34 13 32 13 30 13 27 16 21 18 15 20 7 17 2 9Z"/></svg>LEGENDARY <span>LOOKS</span></div>
+    <div class="logo">LEGENDARY <span>LOOKS</span></div>
     <p>500 Talcottville Rd, Vernon, CT 06066 · <a href="tel:+18608585301">(860) 858-5301</a></p>
     <p style="margin-top:6px"><a href="https://www.instagram.com/legendary_looks_barbershop/" target="_blank" rel="noopener">@legendary_looks_barbershop</a></p>
     <p style="margin-top:8px;font-size:13px">&copy; 2026 Legendary Looks Barbershop. All rights reserved.</p>
