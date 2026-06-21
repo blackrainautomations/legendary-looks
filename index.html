@@ -7,23 +7,23 @@
 <meta name="description" content="Vernon's premier barbershop. Precision fades, classic & modern cuts, straight-razor detailing and hot-towel shaves. 500 Talcottville Rd. Book your chair." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --bg:#0a0706;
-    --bg2:#130d09;
-    --panel:#171008;
-    --line:#2a2017;
-    --gold:#e8b24c;
-    --amber:#ff9a3c;
-    --ember:#ff4e2a;
-    --cream:#f6efe2;
-    --muted:#a6927a;
+    --bg:#080406;
+    --bg2:#11070b;
+    --panel:#180a10;
+    --line:#3a2230;
+    --gold:#edc967;
+    --amber:#e83b6b;
+    --ember:#c4122f;
+    --cream:#f7eef1;
+    --muted:#b58fa0;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;overflow-x:hidden;cursor:auto}
-  h1,h2,h3,.display{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:1.5px;line-height:.95}
+  h1,h2,h3,.display{font-family:'Playfair Display',serif;font-weight:800;letter-spacing:0;line-height:1.04}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
   svg.ico{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
@@ -34,7 +34,7 @@
 
   /* custom cursor */
   .cursor-glow{position:fixed;top:0;left:0;width:380px;height:380px;border-radius:50%;pointer-events:none;z-index:1;
-    background:radial-gradient(circle,rgba(255,138,60,.10),transparent 60%);transform:translate(-50%,-50%);transition:opacity .3s;will-change:transform}
+    background:radial-gradient(circle,rgba(237,201,103,.10),transparent 60%);transform:translate(-50%,-50%);transition:opacity .3s;will-change:transform}
 
   /* gradient text */
   .grad{background:linear-gradient(100deg,var(--gold),var(--amber) 45%,var(--ember));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -42,8 +42,8 @@
   @keyframes shift{to{background-position:300% 0}}
 
   .btn{position:relative;display:inline-flex;align-items:center;gap:10px;font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:2px;padding:15px 34px;border-radius:6px;border:none;cursor:pointer;transition:.25s ease;
-    background:linear-gradient(100deg,var(--gold),var(--amber));color:#1a0f06;box-shadow:0 0 0 rgba(255,138,60,0);will-change:transform}
-  .btn:hover{box-shadow:0 8px 40px rgba(255,138,60,.5);filter:brightness(1.06)}
+    background:linear-gradient(100deg,var(--gold),var(--amber));color:#1a0f06;box-shadow:0 0 0 rgba(237,201,103,0);will-change:transform}
+  .btn:hover{box-shadow:0 8px 40px rgba(237,201,103,.5);filter:brightness(1.06)}
   .btn-ghost{background:transparent;color:var(--cream);border:1.5px solid var(--line)}
   .btn-ghost:hover{border-color:var(--gold);box-shadow:0 8px 40px rgba(232,178,76,.18)}
   .btn svg.ico{width:18px;height:18px}
@@ -78,7 +78,7 @@
   .kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:22px;padding:8px 16px;border:1px solid var(--line);border-radius:30px;background:rgba(255,255,255,.02)}
   .kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--ember);box-shadow:0 0 12px var(--ember);animation:pulse 2s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-  .hero h1{font-size:clamp(64px,13vw,170px);margin-bottom:18px;text-shadow:0 0 60px rgba(255,138,60,.25)}
+  .hero h1{font-size:clamp(48px,8.5vw,120px);margin-bottom:20px;font-style:italic;text-shadow:0 0 50px rgba(237,201,103,.28),0 0 90px rgba(196,18,46,.22)}
   .hero p{font-size:clamp(16px,2vw,20px);color:var(--muted);max-width:520px;margin-bottom:34px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
   .hero-rating{display:flex;align-items:center;gap:12px;margin-top:40px}
@@ -108,7 +108,7 @@
   .card::before{content:"";position:absolute;inset:0;border-radius:16px;padding:1px;background:linear-gradient(120deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .3s;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
   .card:hover{transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.5)}
   .card:hover::before{opacity:1}
-  .card .ic{width:60px;height:60px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:20px;background:radial-gradient(circle at 30% 30%,rgba(232,178,76,.22),rgba(255,78,42,.06));box-shadow:inset 0 0 20px rgba(232,178,76,.12)}
+  .card .ic{width:60px;height:60px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:20px;background:radial-gradient(circle at 30% 30%,rgba(232,178,76,.22),rgba(196,18,46,.06));box-shadow:inset 0 0 20px rgba(232,178,76,.12)}
   .card .ic svg.ico{width:28px;height:28px}
   .card h3{font-size:27px;letter-spacing:1px;margin-bottom:8px}
   .card p{color:var(--muted);font-size:15px}
@@ -141,7 +141,7 @@
 
   /* BOOK CTA */
   .book{position:relative;overflow:hidden;text-align:center}
-  .book .glowblob{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(255,78,42,.25),transparent 60%);top:50%;left:50%;transform:translate(-50%,-50%);filter:blur(60px);z-index:0}
+  .book .glowblob{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(196,18,46,.25),transparent 60%);top:50%;left:50%;transform:translate(-50%,-50%);filter:blur(60px);z-index:0}
   .book .inner{position:relative;z-index:1;max-width:720px;margin:0 auto}
   .book h2{font-size:clamp(46px,8vw,96px)}
   .book p{color:var(--muted);margin:16px 0 32px;font-size:18px}
@@ -153,7 +153,7 @@
   footer .logo{margin-bottom:12px;display:inline-block}
   footer p{font-size:14px}
 
-  .demo-tag{position:fixed;bottom:16px;right:16px;background:linear-gradient(100deg,var(--gold),var(--ember));color:#1a0f06;font-size:12px;font-weight:700;padding:8px 14px;border-radius:30px;z-index:9999;font-family:'Bebas Neue',sans-serif;letter-spacing:1.5px;box-shadow:0 6px 24px rgba(255,138,60,.4)}
+  .demo-tag{position:fixed;bottom:16px;right:16px;background:linear-gradient(100deg,var(--gold),var(--ember));color:#1a0f06;font-size:12px;font-weight:700;padding:8px 14px;border-radius:30px;z-index:9999;font-family:'Bebas Neue',sans-serif;letter-spacing:1.5px;box-shadow:0 6px 24px rgba(237,201,103,.4)}
 
   @media(max-width:900px){
     .grid,.rev-grid{grid-template-columns:1fr 1fr}
@@ -198,7 +198,7 @@
   <div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div>
   <div class="wrap hero-inner">
     <div class="kicker" data-reveal><span class="dot"></span> Vernon, CT · Est. Excellence</div>
-    <h1 data-reveal>SHARP<br>NEVER <span class="grad-anim">AVERAGE</span></h1>
+    <h1 data-reveal>Sharp.<br>Never <span class="grad-anim">Average.</span></h1>
     <p data-reveal>Precision fades, classic and modern cuts, straight-razor detailing and hot-towel shaves. The chair where Vernon comes to look legendary.</p>
     <div class="hero-cta" data-reveal>
       <a class="btn mag" href="#book">Book Your Chair</a>
